@@ -27,7 +27,7 @@ const pubnub = new PubNub({
     subscribeKey: config.pubnubSubscribeKey,
     publishKey: config.pubnubPublishKey
 });
-const PUBNUB_CHANEL = 'ems_hr';
+const PUBNUB_CHANEL = 'oas_hr';
 const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;

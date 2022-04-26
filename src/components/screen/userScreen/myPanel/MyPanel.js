@@ -60,7 +60,7 @@ const pubnub = new PubNub({
     subscribeKey: config.pubnubSubscribeKey,
     publishKey: config.pubnubPublishKey
 });
-const PUBNUB_CHANEL = 'ems_hr';
+const PUBNUB_CHANEL = 'oas_hr';
 
 let uIdd = "";
 
