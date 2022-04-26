@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "EMS", 
-    "slug": "ems",
+    // TODO
+    "name": "OAS", 
+    "slug": "oas",
     "version": "1.0.8",
     "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",
@@ -18,13 +19,13 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.trillionbits.ems",
+      "bundleIdentifier": "com.aou.oas",
       "config": {
         "googleMapsApiKey": "google map api key"
       }
     },
     "android": {
-      "package": "com.trillionbits.ems",
+      "package": "com.aou.oas",
       "permissions":["CAMERA","READ_EXTERNAL_STORAGE","WRITE_EXTERNAL_STORAGE","ACCESS_COARSE_LOCATION","ACCESS_FINE_LOCATION","READ_PHONE_STATE"],
       "config": {
         "googleMaps": { "apiKey": "google map api key" }   
