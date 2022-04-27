@@ -53,10 +53,6 @@ const ReportsCombo = () => {
     Actions.ReportScreen(); drawerSelectedOption(5);
 }
 
-const NoticeCombo = () => {
-    Actions.Notice(); drawerSelectedOption(6);
-}
-
 
 const LogoutCombo = () => {
     drawerSelectedOption(7);
@@ -69,7 +65,7 @@ export {
     LiveTrackingCombo,
     TasksCombo,
     LeavesCombo,
-    ReportsCombo, NoticeCombo,
+    ReportsCombo,
     drawerSelectedOption,
     LogoutCombo
 }
@@ -189,21 +185,6 @@ export default class DrawerContentAdmin extends React.Component {
                             Attendance Report
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => NoticeCombo()}
-                        style={
-                            global.DrawerContentId == 6 ?
-                                DrawerContentStyle.itemContainerSelected :
-                                DrawerContentStyle.itemContainer}>
-
-                        <Feather name="bell" size={24}
-                            style={{ transform: [{ scaleX: -1 }] }}
-                        />
-                        <Text style={DrawerContentStyle.itemTextStyle}>
-                            Notice Board
-                        </Text>
-                    </TouchableOpacity>
-
                     <TouchableOpacity
                         onPress={() => LogoutCombo()}
                         style={

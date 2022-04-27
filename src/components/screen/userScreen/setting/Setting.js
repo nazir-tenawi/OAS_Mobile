@@ -36,17 +36,11 @@ export default class SettingScreenUser extends React.Component
             Phone: '',
             Email: '',
             userId: '',
-            HasAccessQrCodeScan:false,
         }
     }
 
     modalchangepassword()
     {
-        Actions.QRcode()
-    }
-    Notice()
-    {
-        Actions.UserNotice()
     }
     closemodalchangepassword()
     {
@@ -79,7 +73,6 @@ export default class SettingScreenUser extends React.Component
         const uId = await AsyncStorage.getItem("userId");
         this.setState({ userId: uId });
         var userDetails = await loadFromStorage(storage, CurrentUserProfile);
-        this.setState({ HasAccessQrCodeScan: userDetails.item.HasAccessQrCodeScan })
        
     }
     componentWillMount()
@@ -119,7 +112,6 @@ export default class SettingScreenUser extends React.Component
     }
     openModal3()
     {
-        Actions.Notice();
     }
  logOut = () =>
     {
@@ -167,60 +159,9 @@ export default class SettingScreenUser extends React.Component
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={SettingStyle.middleViewContainer}>   
                     {
-                         this.state.HasAccessQrCodeScan?
-                         <View
-                         style={SettingStyle.viewchangePass}>
-                         <TouchableOpacity onPress={() => this.modalchangepassword()}>
-                             <View style={SettingStyle.view2}>
-                                 <View style={SettingStyle.view3}>
-                                                <AntDesign name="qrcode" size={24}
-                                                    style={{ transform: [{ scaleX: -1 }] }}
-                                                />
-                                     <Text style={SettingStyle.text1}>
-                                     QRcode Scanner
-                                  </Text>
-                                 </View>
-                                 <View style={SettingStyle.ChevronRightStyle}>
-                                     <FontAwesome name="chevron-right"
-                                         size={18}
-                                         color="#cccccc"
-                                         style={{
-                                             marginRight: 20
-                                         }}
-                                     />
-                                 </View>
-                             </View>
-                         </TouchableOpacity>
-                     </View>:
                     <View></View>
                     }               
                  
-                 <View
-                         style={SettingStyle.viewchangePass}>
-                         <TouchableOpacity onPress={() => this.Notice()}>
-                             <View style={SettingStyle.view2}>
-                                 <View style={SettingStyle.view3}>
-                                 <Feather name="bell" size={20} color="#283d48"
-                                            style={{ transform: [{ scaleX: -1 }] }}
-                                        />
-                                     <Text style={SettingStyle.text1}>
-                                     Notice
-                                  </Text>
-                                 </View>
-                                 <View style={SettingStyle.ChevronRightStyle}>
-                                 <FontAwesome name="chevron-right"
-                                            size={18}
-                                            color="#cccccc"
-                                            style={{
-                                                marginRight: 20
-                                            }}
-                                        />
-                                 </View>
-                             </View>
-                         </TouchableOpacity>
-                     </View>
-
-
                     </View>
                     <View style={SettingStyle.lastViewContainer}>
 

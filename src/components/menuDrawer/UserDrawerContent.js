@@ -59,15 +59,6 @@ const LeavesCombo = () =>
     Actions.TabForLeaveApprove(); drawerSelectedOption(5);
 }
 
-
-const NoticeCombo = () =>
-{
-    Actions.UserNotice(); drawerSelectedOption(6);
-}
-const QRcodeCombo = () =>
-{
-    Actions.QRcode(); drawerSelectedOption(7);
-}
 const logoutCombo = () =>
 {
         drawerSelectedOption(9);
@@ -77,12 +68,9 @@ const logoutCombo = () =>
 var { width, height } = Dimensions.get('window');
 export
 {
-    TasksCombo,
     LeavesCombo,
-    NoticeCombo, logoutCombo,
     drawerSelectedOption,
     MyPanelCombo,
-    QRcodeCombo,
 }
 
 
@@ -95,14 +83,12 @@ export default class UserDrawerContent extends React.Component
         this.state = {
             selectedId: 1,
             UserTypeId:null,
-            HasAccessQrCodeScan:false,
         }
     }
     async componentDidMount()
     {
         var userDetails = await loadFromStorage(storage, CurrentUserProfile);
         console.log(userDetails,'^^^^^^^^^^^')
-        this.setState({ HasAccessQrCodeScan: userDetails.item.HasAccessQrCodeScan })
         global.DrawerContentId = 1;
         
     }
@@ -193,38 +179,6 @@ export default class UserDrawerContent extends React.Component
                             Leaves
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => NoticeCombo()}
-                        style={
-                            global.DrawerContentId == 6 ?
-                                DrawerContentStyle.itemContainerSelected :
-                                DrawerContentStyle.itemContainer}>
-
-                                <Feather name="bell" size={24}
-                                style={{ transform: [{ scaleX: -1 }] }}
-                            />
-                        <Text style={DrawerContentStyle.itemTextStyle}>
-                            Notice Board
-                        </Text>
-                    </TouchableOpacity>
-                    {
-                      this.state.HasAccessQrCodeScan?
-                      <TouchableOpacity
-                      onPress={() => QRcodeCombo()}
-                      style={
-                          global.DrawerContentId == 7 ?
-                              DrawerContentStyle.itemContainerSelected :
-                              DrawerContentStyle.itemContainer}>
-                              <AntDesign name="qrcode" size={24}
-                              style={{ transform: [{ scaleX: -1 }] }}
-                          />
-                      <Text style={DrawerContentStyle.itemTextStyle}>
-                        QRcode Scanner
-                      </Text>
-                  </TouchableOpacity>:
-                   <View></View>
-                    } 
-                   
                     <TouchableOpacity
                         onPress={() => logoutCombo()}
                         style={

@@ -106,7 +106,6 @@ export default class SettingScreen extends React.Component {
         console.log(response, '...............');
     }
     openModal3() {
-        Actions.Notice();
     }
     logOut = () => {
         Alert.alert(
@@ -207,44 +206,10 @@ export default class SettingScreen extends React.Component {
                             </TouchableOpacity>
                         </View>
                         <View style={SettingStyle.view1}>
-                            <TouchableOpacity onPress={() => this.openModal3()}>
-                                <View style={SettingStyle.view2}>
-                                    <View
-                                        style={SettingStyle.view3}>
-                                        {/* <Image
-                                            style={SettingStyle.view1Image}
-                                            source={require('../../../assets/images/s_2.png')}>
-                                        </Image> */}
-                                        <Feather name="bell" size={20} color="#283d48"
-                                            style={{ transform: [{ scaleX: -1 }] }}
-                                        />
-                                        <Text
-                                            style={SettingStyle.text1}>
-                                            Notice
-                                        </Text>
-                                    </View>
-                                    <View style={SettingStyle.ChevronRightStyle}>
-                                        <FontAwesome name="chevron-right"
-                                            size={18}
-                                            color="#cccccc"
-                                            style={{
-                                                marginRight: 20
-                                            }}
-                                        />
-                                    </View>
-                                </View>
-                            </TouchableOpacity>
-                        </View>
-
-                        <View style={SettingStyle.view1}>
                             <TouchableOpacity onPress={() => this.modalchangepassword()}>
                                 <View style={SettingStyle.view2}>
                                     <View
                                         style={SettingStyle.view3}>
-                                        {/* <Image
-                                            style={SettingStyle.view1Image}
-                                            source={require('../../../assets/images/s_2.png')}>
-                                        </Image> */}
                                          <Feather name="calendar" size={20} color="#283d48"
                                             style={{ transform: [{ scaleX: -1 }] }}
                                         />

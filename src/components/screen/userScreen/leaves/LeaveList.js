@@ -10,7 +10,7 @@ ActivityIndicator, AsyncStorage, BackHandler, Alert,
 import {
 DailyAttendanceCombo, MyPanelCombo,
 MyTaskCombo, LeaveListCombo,
-BillsCombo, ExpensesCombo, NoticeCombo,
+BillsCombo, ExpensesCombo,
 drawerSelectedOption
 } from '../../../menuDrawer/UserDrawerContent';
 

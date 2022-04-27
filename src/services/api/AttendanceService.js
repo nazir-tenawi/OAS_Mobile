@@ -20,7 +20,5 @@ export const GetMonthlyAttendanceDetails = async ( userId,year,month) => getApi(
 export const GetAll = async () => getApi("EmployeeAttendanceApi/GetAll", {}, {});
 export const GetUserId = async (empCode) => getApi("EmployeeAttendanceApi/GetUserId?empCode="+empCode, {}, {});
 
-export const GetMyTodayAttendanceQRcode = async (UserId) => getApi("EmployeeAttendanceApi/GetMyTodayAttendanceQRcode?UserId="+UserId, {}, {});
-export const GetMovementDetailsQRcode = async (UserId) => getApi("EmployeeAttendanceApi/GetMovementDetailsQRcode?UserId="+UserId, {}, {});
 
 

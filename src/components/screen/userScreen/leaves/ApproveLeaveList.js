@@ -11,7 +11,7 @@ import Modal from 'react-native-modalbox';
 import {
     DailyAttendanceCombo, MyPanelCombo,
     MyTaskCombo, LeaveListCombo,
-    BillsCombo, ExpensesCombo, NoticeCombo,
+    BillsCombo, ExpensesCombo,
     drawerSelectedOption
 } from '../../../menuDrawer/UserDrawerContent';
 

@@ -58,15 +58,6 @@ export const CommonStyles = StyleSheet.create({
         fontFamily: "PRODUCT_SANS_BOLD", fontSize: 16,
         textAlign: "left", color: "black",
     },
-
-    createTaskButtonContainer: {
-        justifyContent: 'flex-end', marginRight: 0,
-        marginLeft: 0, flexDirection: 'row',
-        alignItems: 'center',
-    },
-    createTaskButtonTouch: {
-        flexDirection: 'row', alignItems: 'center', padding: 3,
-    },
     plusButton: {
         backgroundColor: "#355FB7",
         alignItems: 'center',

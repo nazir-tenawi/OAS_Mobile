@@ -43,10 +43,6 @@ export const LiveTrackingStyle = StyleSheet.create({
         justifyContent: 'space-between', flexDirection: 'row',
         borderBottomColor: 'white', borderBottomWidth: 2, paddingBottom: 10,
     },
-        noticepart: {
-        alignItems: 'flex-start',
-        color: '#1a1a1a', fontSize: 10, fontFamily: 'OPENSANS_REGULAR'
-    },
     EmpText:
     {
         fontSize: 12, color: '#8f8f8f'
